@@ -1,16 +1,18 @@
+
+
 class PostIt{
     x;
     y;
     largeur;
     hauteur;
-    couleur;
+    color;
     texte;
-    constructor(x, y, largeur, hauteur, couleur, texte) {
+    constructor(x, y, largeur, hauteur, color, texte) {
         this.x = x;
         this.y = y;
         this.largeur = largeur;
         this.hauteur = hauteur;
-        this.couleur = couleur;
+        this.color = color;
         this.texte = texte;
     }
     deplace(){
@@ -25,7 +27,20 @@ class PostIt{
 
     }
 
-    afiiche() {
+    affiche() {
+        let zonePostIt
+        zonePostIt = document.querySelector(".zonePostIt")
+        let myPostIt = document.createElement("div")
+        myPostIt.style.position = "fixed"
+        myPostIt.style.top = this.y + "px" 
+        myPostIt.style.left = this.x + "px"
+        myPostIt.style.backgroundColor = this.color 
+        myPostIt.style.width = this.largeur + "px"
+        myPostIt.style.height = this.hauteur + "px"
+        myPostIt.innerHTML = this.texte
+        zonePostIt.appendChild(myPostIt)
 
+
+        
     }
 }
