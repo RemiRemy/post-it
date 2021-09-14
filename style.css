@@ -1,5 +1,53 @@
-.postIt{
-    /* background-color: yellow ;
-    width: 100px;
-    height: 100px; */
+:root{
+    --var-rose: #EE5098;
+    --var-yellow: #F7DD00;
+    --var-green: #DCE346;
+    --var-blue:#00B6E1;
 }
+
+h1{
+    margin-left: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    border: black solid 1px;
+    background-color: var(--var-yellow);
+    box-shadow: black 1px 1px 5px 1px;
+    z-index: 1000;
+
+}
+
+nav{
+    
+   
+}
+
+ul{
+    display: flex;
+    /* margin-left: 500px; */
+    
+    
+    font-weight: bold;
+    list-style-type: none;
+}
+
+li{
+    margin: 20px;
+}
+
+.marge{
+    margin-top: 10px;
+    width: 150px;
+    border: black solid 1px;
+    height: 100vh;
+    background-color: var(--var-rose);
+}
+
+.marge>ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
