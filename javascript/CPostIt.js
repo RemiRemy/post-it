@@ -1,5 +1,7 @@
 
-
+/**
+ * @class PostIt - 
+ */
 class PostIt{
     x;
     y;
@@ -9,7 +11,18 @@ class PostIt{
     texte;
     colorTexte;
     myPostIt;
-    constructor(x, y, largeur, hauteur, color, texte, colorTexte) {
+    /**
+     * 
+     * @param {*} num 
+     * @param {*} x 
+     * @param {*} y 
+     * @param {*} largeur 
+     * @param {*} hauteur 
+     * @param {*} color 
+     * @param {*} texte 
+     * @param {*} colorTexte 
+     */
+    constructor(num, x = 180, y = 150, largeur = 200, hauteur = 200, color = "#F7DD00", texte = "vide ton cerveau ici ", colorTexte = "black" ) {
         this.x = x;
         this.y = y;
         this.largeur = largeur;
@@ -17,6 +30,7 @@ class PostIt{
         this.color = color;
         this.texte = texte;
         this.colorTexte = colorTexte;
+        this.num = num;
         this.myPostIt = document.createElement("div")
     }
     deplace(x, y){
@@ -50,6 +64,14 @@ class PostIt{
         this.myPostIt.style.height = this.hauteur + "px"
         this.myPostIt.innerHTML = this.texte
         this.myPostIt.style.color = this.colorTexte
+        this.myPostIt.addEventListener("click", event=> {
+            console.log(this.num)
+           if( numPostIt != this.num) {
+               numPostIt = this.num
+           }else{
+               numPostIt = -1
+           }
+        })
         zonePostIt.appendChild(this.myPostIt)
 
     }

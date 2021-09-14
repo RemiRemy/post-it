@@ -5,6 +5,8 @@
     --var-blue:#00B6E1;
 }
 
+
+
 h1{
     margin-left: 20px;
 }
@@ -51,3 +53,10 @@ li{
     padding: 0;
 }
 
+#create{
+    cursor: pointer;
+}
+
+#create:hover {
+    color:blanchedalmond;
+}
