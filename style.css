@@ -60,3 +60,15 @@ li{
 #create:hover {
     color:blanchedalmond;
 }
+
+.menu{
+    border: solid black 1px;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.fas{
+    margin: 0 5px;
+}

@@ -64,6 +64,15 @@ class PostIt{
         this.myPostIt.style.height = this.hauteur + "px"
         this.myPostIt.innerHTML = this.texte
         this.myPostIt.style.color = this.colorTexte
+        let menu = document.createElement("div")
+        menu.classList.add("menu") // pareil que className mais permet plusieur class css
+        this.myPostIt.appendChild(menu)
+        let resize = document.createElement("div")
+        resize.classList.add("fas", "fa-expand-alt") 
+        menu.appendChild(resize)
+        let write = document.createElement("div")
+        write.classList.add("fas", "fa-edit")
+        menu.appendChild(write)
         this.myPostIt.addEventListener("click", event=> {
             console.log(this.num)
            if( numPostIt != this.num) {
@@ -73,6 +82,7 @@ class PostIt{
            }
         })
         zonePostIt.appendChild(this.myPostIt)
+        
 
     }
 }
